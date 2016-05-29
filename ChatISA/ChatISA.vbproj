@@ -118,6 +118,12 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Iconos.designer.vb">
+      <DependentUpon>Iconos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Iconos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="listaContactos.Designer.vb">
       <DependentUpon>listaContactos.vb</DependentUpon>
     </Compile>
@@ -151,6 +157,12 @@
     <Compile Include="NuevaTarea.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Perfil.Designer.vb">
+      <DependentUpon>Perfil.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Perfil.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="User.vb" />
     <Compile Include="videoLlamada.Designer.vb">
       <DependentUpon>videoLlamada.vb</DependentUpon>
@@ -167,6 +179,9 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Iconos.resx">
+      <DependentUpon>Iconos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="listaContactos.resx">
       <DependentUpon>listaContactos.vb</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +196,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevaTarea.resx">
       <DependentUpon>NuevaTarea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Perfil.resx">
+      <DependentUpon>Perfil.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="videoLlamada.resx">
       <DependentUpon>videoLlamada.vb</DependentUpon>
@@ -273,6 +291,32 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\male1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Iconos\alegre.png" />
+    <Content Include="Resources\Iconos\cool.png" />
+    <Content Include="Resources\Iconos\corazon.png" />
+    <Content Include="Resources\Iconos\corazon2.png" />
+    <Content Include="Resources\Iconos\decepcion.png" />
+    <Content Include="Resources\Iconos\dislike.png" />
+    <Content Include="Resources\Iconos\enfermo.png" />
+    <Content Include="Resources\Iconos\enojado.png" />
+    <Content Include="Resources\Iconos\feliz.png" />
+    <Content Include="Resources\Iconos\genial.png" />
+    <Content Include="Resources\Iconos\icono1.png" />
+    <Content Include="Resources\Iconos\laic.png" />
+    <Content Include="Resources\Iconos\llanto.png" />
+    <Content Include="Resources\Iconos\muyEnojado.png" />
+    <Content Include="Resources\Iconos\noSe.png" />
+    <Content Include="Resources\Iconos\pensativo.png" />
+    <Content Include="Resources\Iconos\shapes-2.png" />
+    <Content Include="Resources\Iconos\smile.png" />
+    <Content Include="Resources\Iconos\smiley.png" />
+    <Content Include="Resources\Iconos\sorprendido.png" />
+    <Content Include="Resources\Iconos\triste.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

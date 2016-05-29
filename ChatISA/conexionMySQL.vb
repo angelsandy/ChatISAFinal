@@ -2,7 +2,7 @@
 
 Public Class conexionMySQL
 
-    Dim cadena = "server=localhost; user id=root; password=arce;"
+    Dim cadena = "server=localhost; user id=root; password = ;Convert Zero Datetime=True;"
     Dim cadenaTemp
     Dim conexion As New MySqlConnection(cadena)
     Dim cmd As New MySqlCommand
@@ -29,6 +29,11 @@ Public Class conexionMySQL
                 listaContactos.cmbx_grupo.ValueMember = "idGrupoChat"
             Case 4
                 listaContactos.dgv_gurpo.DataSource = ds.Tables(tablas)
+            Case 5
+                login.cmbx_IP.DataSource = ds.Tables(tablas)
+                login.cmbx_IP.DisplayMember = "IP"
+            Case 6
+                NuevaTarea.DataGridView1.DataSource = ds.Tables(tablas)
         End Select
 
         dr.Close()

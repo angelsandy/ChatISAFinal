@@ -50,7 +50,7 @@ Partial Class login
         'btn_acceder
         '
         Me.btn_acceder.Location = New System.Drawing.Point(315, 282)
-        Me.btn_acceder.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_acceder.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_acceder.Name = "btn_acceder"
         Me.btn_acceder.Size = New System.Drawing.Size(161, 28)
         Me.btn_acceder.TabIndex = 22
@@ -60,7 +60,7 @@ Partial Class login
         'txtb_contrasenia
         '
         Me.txtb_contrasenia.Location = New System.Drawing.Point(315, 151)
-        Me.txtb_contrasenia.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtb_contrasenia.Margin = New System.Windows.Forms.Padding(4)
         Me.txtb_contrasenia.Name = "txtb_contrasenia"
         Me.txtb_contrasenia.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtb_contrasenia.Size = New System.Drawing.Size(160, 22)
@@ -69,7 +69,7 @@ Partial Class login
         'txtb_correo
         '
         Me.txtb_correo.Location = New System.Drawing.Point(315, 102)
-        Me.txtb_correo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtb_correo.Margin = New System.Windows.Forms.Padding(4)
         Me.txtb_correo.Name = "txtb_correo"
         Me.txtb_correo.Size = New System.Drawing.Size(160, 22)
         Me.txtb_correo.TabIndex = 20
@@ -125,7 +125,7 @@ Partial Class login
         'txtb_file
         '
         Me.txtb_file.Location = New System.Drawing.Point(69, 303)
-        Me.txtb_file.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtb_file.Margin = New System.Windows.Forms.Padding(4)
         Me.txtb_file.Name = "txtb_file"
         Me.txtb_file.Size = New System.Drawing.Size(115, 22)
         Me.txtb_file.TabIndex = 33
@@ -133,7 +133,7 @@ Partial Class login
         'txtb_usuarion
         '
         Me.txtb_usuarion.Location = New System.Drawing.Point(69, 151)
-        Me.txtb_usuarion.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtb_usuarion.Margin = New System.Windows.Forms.Padding(4)
         Me.txtb_usuarion.Name = "txtb_usuarion"
         Me.txtb_usuarion.Size = New System.Drawing.Size(160, 22)
         Me.txtb_usuarion.TabIndex = 28
@@ -141,7 +141,7 @@ Partial Class login
         'fbtn_file
         '
         Me.fbtn_file.Location = New System.Drawing.Point(193, 299)
-        Me.fbtn_file.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.fbtn_file.Margin = New System.Windows.Forms.Padding(4)
         Me.fbtn_file.Name = "fbtn_file"
         Me.fbtn_file.Size = New System.Drawing.Size(37, 28)
         Me.fbtn_file.TabIndex = 32
@@ -151,7 +151,7 @@ Partial Class login
         'txtb_contrasenian
         '
         Me.txtb_contrasenian.Location = New System.Drawing.Point(69, 201)
-        Me.txtb_contrasenian.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtb_contrasenian.Margin = New System.Windows.Forms.Padding(4)
         Me.txtb_contrasenian.Name = "txtb_contrasenian"
         Me.txtb_contrasenian.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.txtb_contrasenian.Size = New System.Drawing.Size(160, 22)
@@ -171,7 +171,7 @@ Partial Class login
         'btn_crear
         '
         Me.btn_crear.Location = New System.Drawing.Point(69, 347)
-        Me.btn_crear.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btn_crear.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_crear.Name = "btn_crear"
         Me.btn_crear.Size = New System.Drawing.Size(161, 28)
         Me.btn_crear.TabIndex = 30
@@ -192,7 +192,7 @@ Partial Class login
         'txtb_IPn
         '
         Me.txtb_IPn.Location = New System.Drawing.Point(69, 250)
-        Me.txtb_IPn.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtb_IPn.Margin = New System.Windows.Forms.Padding(4)
         Me.txtb_IPn.Name = "txtb_IPn"
         Me.txtb_IPn.Size = New System.Drawing.Size(160, 22)
         Me.txtb_IPn.TabIndex = 35
@@ -222,7 +222,7 @@ Partial Class login
         'txt_correon
         '
         Me.txt_correon.Location = New System.Drawing.Point(69, 102)
-        Me.txt_correon.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txt_correon.Margin = New System.Windows.Forms.Padding(4)
         Me.txt_correon.Name = "txt_correon"
         Me.txt_correon.Size = New System.Drawing.Size(160, 22)
         Me.txt_correon.TabIndex = 39
@@ -273,6 +273,7 @@ Partial Class login
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.ChatISA.My.Resources.Resources._9187718
         Me.ClientSize = New System.Drawing.Size(549, 407)
         Me.Controls.Add(Me.rdb_IPn)
         Me.Controls.Add(Me.cmbx_IP)
@@ -297,7 +298,7 @@ Partial Class login
         Me.Controls.Add(Me.fbtn_file)
         Me.Controls.Add(Me.txtb_contrasenian)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "login"

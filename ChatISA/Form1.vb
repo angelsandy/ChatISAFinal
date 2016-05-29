@@ -16,13 +16,15 @@ Imports System.Diagnostics
 
 
 Public Class Form1
-
+    Private stringData As String
+    Dim picturePos As Integer
     Dim server As Server
     Dim MyUser As User
     Dim waitingMessage As Thread
     Dim chatOn As Boolean
     Dim serverIP As String = "192.168.43.53"
-
+    Dim yPos As Integer
+    Dim connect As New conexionMySQL
     Delegate Sub AddListItem(myString As String)
     Public myDelegate As AddListItem
 
@@ -42,7 +44,6 @@ Public Class Form1
         MyUser.userName = NameP
         'Me.lbl_nombre.Text = nombreDestinoP
         MyUser.tipo = tipoP
-
         Select Case StateP
             Case "Conectado"
                 MyUser.userState = Enums.UserState.Conectado
@@ -51,7 +52,6 @@ Public Class Form1
             Case "Ocupado"
                 MyUser.userState = Enums.UserState.Ocupado
         End Select
-
         server = New Server(serverIP)
         server.IP = IPP
         waitingMessage = New Thread(New ThreadStart(AddressOf WaittingMessage))
@@ -68,10 +68,12 @@ Public Class Form1
             server.serverData(1024) = New Byte
             server.serverRecv = 0
             server.serverStringData = ""
-            server.serverRecv = server.serverSocket.Receive(server.serverData)
-
             server.serverStringData = Encoding.ASCII.GetString(server.serverData, 0, server.serverRecv)
             If server.serverStringData <> "" Then
+                If server.serverStringData = "beep" Then
+                    My.Computer.Audio.PlaySystemSound(Media.SystemSounds.Beep)
+                    server.serverStringData = ""
+                End If
                 SetText(server.serverStringData)
             End If
         End While
@@ -316,10 +318,55 @@ Public Class Form1
     ''End Sub
 
 
-    Private Sub btn_camara_Click(sender As Object, e As EventArgs) Handles btn_camara.Click
-
-        'videoLlamada.RELOJWEBCAM.Enabled = True
+    Private Sub btn_camara_Click(sender As Object, e As EventArgs)
         videoLlamada.Show()
     End Sub
 
+    Private Sub Nombre_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Nombre.SelectedIndexChanged
+
+    End Sub
+
+    Private Sub Iconitos_Click(sender As Object, e As EventArgs) Handles Iconitos.Click
+        Iconos.Show()
+    End Sub
+
+    Public Sub crearIcono()
+
+        If Iconos.nuevoPb.Visible = True Then
+            Iconos.nuevoPb.Location = New Point(Len(stringData), picturePos)
+
+            'Me.Controls.Add(Iconos.nuevoPb)
+            'GroupBox1.Controls.Add(Iconos.nuevoPb)
+            Dim bitmap As New Bitmap(Iconos.nuevoPb.Image, New Size(35, 35))
+            Clipboard.SetImage(bitmap)
+            rTBChat.Paste()
+            rTBChat.AppendText(vbCrLf)
+            'RichTextBox1.Controls.Add(Iconos.nuevoPb)
+            'Iconos.nuevoPb.BringToFront()
+            yPos += 15
+            stringData = ""
+        End If
+
+    End Sub
+
+    Private Sub beep_Click(sender As Object, e As EventArgs) Handles beep.Click
+        server.serverInput = MyUser.userName + ":" + "@" + MyUser.NameDestino + ":" + "beep" + vbLf
+        server.sendMessage()
+    End Sub
+
+    Private Sub Enviar1_Click(sender As Object, e As EventArgs) Handles Enviar1.Click
+        OpenFileDialog1.Filter = "Text File (*.txt)| * .txt; | PDF File (*.pdf)| * .pdf;| Word File (*.doc,*.docx)| *.doc;*.docx;  "
+        If OpenFileDialog1.ShowDialog = DialogResult.OK Then
+            txtb_mensaje.Text = OpenFileDialog1.FileName
+        End If
+    End Sub
+
+    Private Sub ComboBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox1.SelectedIndexChanged
+        Dim sql As String = "Update Usuario Set estado ='" & ComboBox1.SelectedIndex.ToString() & "' where nombreUsuario ='" & MyUser.userName & "';"
+        connect.ComandoSQL(sql, "Usuario", 0, 0)
+    End Sub
+
+    Private Sub txtb_mensaje_TextChanged(sender As Object, e As EventArgs) Handles txtb_mensaje.TextChanged
+
+    End Sub
 End Class

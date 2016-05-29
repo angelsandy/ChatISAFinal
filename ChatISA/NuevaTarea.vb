@@ -13,6 +13,7 @@ Public Class NuevaTarea
     Dim cantRegistros As Integer
     Dim localizarY As Integer
     Dim conRow As Integer
+    Shared Property Today As Date
     Private Sub CheckedListBox1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ListaProyecto.SelectedIndexChanged
         Check()
     End Sub
@@ -21,11 +22,11 @@ Public Class NuevaTarea
         For i As Integer = 0 To ListaProyecto.Items.Count - 1
             If (ListaProyecto.GetItemChecked(i)) Then
                 item = ListaProyecto.CheckedItems(i).ToString
-                Dim sql As String = "Update Tarea Set activo = 0 where nombreTareas ='" & item & "';"
+                Dim sql As String = "Update Tarea Set activo = 1 where nombreTareas ='" & item & "';"
                 connect.ComandoSQL(sql, "Tarea", 0, 0)
             Else
                 item = ListaProyecto.CheckedItems(i).ToString
-                Dim sql As String = "Update Tarea Set activo = 1 where nombreTareas ='" & item & "';"
+                Dim sql As String = "Update Tarea Set activo = 0 where nombreTareas ='" & item & "';"
                 connect.ComandoSQL(sql, "Tarea", 0, 0)
             End If
         Next i
@@ -38,6 +39,7 @@ Public Class NuevaTarea
 
     Private Sub Cerrar11_Click(sender As Object, e As EventArgs) Handles Cerrar11.Click
         Me.Hide()
+        Perfil.Show()
     End Sub
 
     Private Sub proyectonuevo_TextChanged(sender As Object, e As EventArgs) Handles proyectonuevo.TextChanged
@@ -49,27 +51,24 @@ Public Class NuevaTarea
         ListaProyecto.Items.Add(proyectonuevo.Text)
         connect.ComandoSQL(sqlInsert, "Tarea", 0, 5)
     End Sub
-
-
     Private Sub NuevaTarea_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
-        Dim sqlselect As String = "SELECT * FROM isa_1.tarea;"
+        Dim sqlselect As String = "SELECT idTarea, nombreTareas,fechaTarea,activo from tarea join usuario on tarea.idUsuario = usuario.idUsuario where nombreUsuario = 'isaac';"
         connect.ComandoSQL(sqlselect, "tarea", 6, 0)
-        cantRegistros = DataGridView1.Rows.Count
-
+        cantRegistros = DataGridView1.Rows.Count - 1
         conRow = 0
         localizarY = 0
-        While (cantRegistros <> 0)
-            ListaProyecto.Items.Add(DataGridView1.Rows(conRow).Cells(1).Value)
-            If (DataGridView1.Rows(conRow).Cells(2).Value <> 1) Then
-                ListaProyecto.Items.Add(DataGridView1.Rows(conRow).Cells(1).Value, True)
+        Dim result As Integer
+        For index As Integer = 0 To cantRegistros
+            Dim todaysdate As String
+            Dim today As Date = Date.Now.Date
+            todaysdate = today.ToString("yyyy-MM-dd", Globalization.CultureInfo.InvariantCulture)
+            result = DateTime.Compare(Me.DataGridView1.Rows(index).Cells(2).Value, todaysdate)
+            If (result <= -1 Or Me.DataGridView1.Rows(index).Cells(3).Value) Then
+                ListaProyecto.Items.Add(Me.DataGridView1.Rows(index).Cells(1).Value, True)
             Else
-                ListaProyecto.Items.Add(DataGridView1.Rows(conRow).Cells(1).Value, False)
+                ListaProyecto.Items.Add(Me.DataGridView1.Rows(index).Cells(1).Value, False)
             End If
-            cantRegistros -= 1
-            conRow += 1
-
-        End While
+        Next
     End Sub
 
     Private Sub nombreProyecto_Click(sender As Object, e As EventArgs) Handles nombreProyecto.Click

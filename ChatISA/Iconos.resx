@@ -117,36 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="idTarea.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="nombreTareas.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="fechaTarea.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="activo.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="Cerrar12.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACQAAAAZCAYAAABZ5IzrAAAAIGNIUk0AAH6QAAB/swAA4BkAAIVRAAB4
-        wAAA0LkAADvaAAAldhd+OwsAAAAJcEhZcwAACxMAAAsTAQCanBgAAAKFSURBVEhLtde9rk1hEMbxk1AI
-        CnSiUeIKKCRKCXEFKiIK5Uk0B5dwEhE3oESIRiEhOjU6UWh9JRSIj1ie/7Zm5ZnZs0+2g+JXzD4z7+x9
-        3rVmvWtlGIbJzQun/7cjcl+2E3vvkIKxaIc8kmNj/K+clE8yyD3Z4r1DCkgakyn6JuelLrwZZ+WHsG64
-        5r1DCpS0XopwXbZKbbKsS/JTfE3iNe8dUqCkVam/BA9lj9RmG+G/zY+pa32XM5J6hxSQJMflg9SFXsoh
-        8aaLbJPbUtfgGuJamuV575CCSJQD8kLqgh/lhHhutUseS619J4dlyvXeIQWeLLvlgdSF2dKLUvOxT55J
-        rXkl/MiU771DCmqBcDFfldoAN4StiVwa0rjmPRW+qK87471DCrqi0Tn5KrXZE9krDLz342eOrWMLuzVT
-        75CCrsgclTdSm76VL+UzcFH7f3CO9w4p6IqK/cIW1OYVtzu3fbfGxHuHFHRFjZ1yV7ovgsvS1c3x3iEF
-        XVFj0cALfFm+dFebeO+Qgq6o4Jq4Jd0XcWwr29utMfHeIQVdkVk08BiWr8tn4AbgRujWmvHeIQVd0Yg5
-        0l3MzJ2Dwq3PCKh/Z1QwMro1U++Qgq5IFg285+IDj+1kWNY8MFznTgzeO6SgFggDj2dQbcDW8Wjpanis
-        dCcGHkOpxnuHFHiy+AnP3ZENB57wAObaqrU8sKdnmvcOKYhE4bzCuaUuuNTAG3FU4chS1+BowxEn9Q4p
-        IEnWpJ7wcEW84TI41HG4q2uxpaveO6RASahDj2LOxN7oT3Axd4N03XuHFCgJftD/LKfEG2wWLwy8OLDu
-        0m8dgfcm3p+4y/zzv8WrFa9YvGql3r8NK78AcGA8XJf2PSEAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="Cerrar11.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAACQAAAAZCAYAAABZ5IzrAAAAIGNIUk0AAH6QAAB/swAA4BkAAIVRAAB4

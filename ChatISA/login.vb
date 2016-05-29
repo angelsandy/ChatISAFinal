@@ -22,7 +22,7 @@ Public Class login
 
     Private Sub btn_acceder_Click(sender As Object, e As EventArgs) Handles btn_acceder.Click
         validacion()
-        listaContactos.Show()
+        Perfil.Show()
     End Sub
 
     Private Sub validacion()
@@ -82,5 +82,15 @@ Public Class login
             Me.txtb_IP.Enabled = False
             Me.cmbx_IP.Enabled = True
         End If
+    End Sub
+
+    Private Sub cmbx_IP_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cmbx_IP.SelectedIndexChanged
+
+
+    End Sub
+
+    Private Sub login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim sql As String = "select ip from usuario;"
+        conect.ComandoSQL(sql, "usuario", 5, 0)
     End Sub
 End Class

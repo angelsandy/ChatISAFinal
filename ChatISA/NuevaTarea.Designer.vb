@@ -32,6 +32,10 @@ Partial Class NuevaTarea
         Me.Cerrar12 = New Close.cerrar1()
         Me.Cerrar11 = New Close.cerrar1()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.idTarea = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.nombreTareas = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.fechaTarea = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.activo = New System.Windows.Forms.DataGridViewTextBoxColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -65,14 +69,14 @@ Partial Class NuevaTarea
         Me.nombreProyecto.Name = "nombreProyecto"
         Me.nombreProyecto.Size = New System.Drawing.Size(308, 51)
         Me.nombreProyecto.TabIndex = 11
-        Me.nombreProyecto.Text = "Label1"
+        Me.nombreProyecto.Text = "Proyectos"
         Me.nombreProyecto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Linen
         Me.Label1.Font = New System.Drawing.Font("Bauhaus 93", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(151, 231)
+        Me.Label1.Location = New System.Drawing.Point(155, 181)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(290, 33)
         Me.Label1.TabIndex = 12
@@ -91,12 +95,17 @@ Partial Class NuevaTarea
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(98, 351)
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.idTarea, Me.nombreTareas, Me.fechaTarea, Me.activo})
+        Me.DataGridView1.Location = New System.Drawing.Point(414, 351)
         Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
-        Me.DataGridView1.Size = New System.Drawing.Size(414, 150)
+        Me.DataGridView1.Size = New System.Drawing.Size(151, 150)
         Me.DataGridView1.TabIndex = 14
+        Me.DataGridView1.Visible = False
         '
         'Cerrar12
         '
@@ -143,6 +152,34 @@ Partial Class NuevaTarea
         Me.PictureBox1.TabIndex = 0
         Me.PictureBox1.TabStop = False
         '
+        'idTarea
+        '
+        Me.idTarea.DataPropertyName = "idTarea"
+        Me.idTarea.HeaderText = "tarea"
+        Me.idTarea.Name = "idTarea"
+        Me.idTarea.ReadOnly = True
+        '
+        'nombreTareas
+        '
+        Me.nombreTareas.DataPropertyName = "nombreTareas"
+        Me.nombreTareas.HeaderText = "Column1"
+        Me.nombreTareas.Name = "nombreTareas"
+        Me.nombreTareas.ReadOnly = True
+        '
+        'fechaTarea
+        '
+        Me.fechaTarea.DataPropertyName = "fechaTarea"
+        Me.fechaTarea.HeaderText = "Column1"
+        Me.fechaTarea.Name = "fechaTarea"
+        Me.fechaTarea.ReadOnly = True
+        '
+        'activo
+        '
+        Me.activo.DataPropertyName = "activo"
+        Me.activo.HeaderText = "Column1"
+        Me.activo.Name = "activo"
+        Me.activo.ReadOnly = True
+        '
         'NuevaTarea
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -175,4 +212,8 @@ Partial Class NuevaTarea
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents FechaEntrega As System.Windows.Forms.DateTimePicker
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents idTarea As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents nombreTareas As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents fechaTarea As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents activo As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class
