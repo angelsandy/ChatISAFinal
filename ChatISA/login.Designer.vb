@@ -77,7 +77,7 @@ Partial Class login
         'lbl_contrasenia
         '
         Me.lbl_contrasenia.AutoSize = True
-        Me.lbl_contrasenia.BackColor = System.Drawing.Color.NavajoWhite
+        Me.lbl_contrasenia.BackColor = System.Drawing.Color.Transparent
         Me.lbl_contrasenia.Location = New System.Drawing.Point(307, 130)
         Me.lbl_contrasenia.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_contrasenia.Name = "lbl_contrasenia"
@@ -88,7 +88,7 @@ Partial Class login
         'lbl_correo
         '
         Me.lbl_correo.AutoSize = True
-        Me.lbl_correo.BackColor = System.Drawing.Color.NavajoWhite
+        Me.lbl_correo.BackColor = System.Drawing.Color.Transparent
         Me.lbl_correo.Location = New System.Drawing.Point(307, 81)
         Me.lbl_correo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_correo.Name = "lbl_correo"
@@ -103,7 +103,7 @@ Partial Class login
         'lbl_usuarion
         '
         Me.lbl_usuarion.AutoSize = True
-        Me.lbl_usuarion.BackColor = System.Drawing.Color.NavajoWhite
+        Me.lbl_usuarion.BackColor = System.Drawing.Color.Transparent
         Me.lbl_usuarion.Location = New System.Drawing.Point(61, 130)
         Me.lbl_usuarion.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_usuarion.Name = "lbl_usuarion"
@@ -114,7 +114,7 @@ Partial Class login
         'lbl_contreasenian
         '
         Me.lbl_contreasenian.AutoSize = True
-        Me.lbl_contreasenian.BackColor = System.Drawing.Color.NavajoWhite
+        Me.lbl_contreasenian.BackColor = System.Drawing.Color.Transparent
         Me.lbl_contreasenian.Location = New System.Drawing.Point(61, 180)
         Me.lbl_contreasenian.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_contreasenian.Name = "lbl_contreasenian"
@@ -160,7 +160,7 @@ Partial Class login
         'lbl_foto
         '
         Me.lbl_foto.AutoSize = True
-        Me.lbl_foto.BackColor = System.Drawing.Color.NavajoWhite
+        Me.lbl_foto.BackColor = System.Drawing.Color.Transparent
         Me.lbl_foto.Location = New System.Drawing.Point(65, 282)
         Me.lbl_foto.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_foto.Name = "lbl_foto"
@@ -181,7 +181,7 @@ Partial Class login
         'lbl_ip
         '
         Me.lbl_ip.AutoSize = True
-        Me.lbl_ip.BackColor = System.Drawing.Color.NavajoWhite
+        Me.lbl_ip.BackColor = System.Drawing.Color.Transparent
         Me.lbl_ip.Location = New System.Drawing.Point(61, 229)
         Me.lbl_ip.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_ip.Name = "lbl_ip"
@@ -200,7 +200,7 @@ Partial Class login
         'lbl_ipa
         '
         Me.lbl_ipa.AutoSize = True
-        Me.lbl_ipa.BackColor = System.Drawing.Color.NavajoWhite
+        Me.lbl_ipa.BackColor = System.Drawing.Color.Transparent
         Me.lbl_ipa.Location = New System.Drawing.Point(307, 180)
         Me.lbl_ipa.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_ipa.Name = "lbl_ipa"
@@ -211,7 +211,7 @@ Partial Class login
         'lbl_correon
         '
         Me.lbl_correon.AutoSize = True
-        Me.lbl_correon.BackColor = System.Drawing.Color.NavajoWhite
+        Me.lbl_correon.BackColor = System.Drawing.Color.Transparent
         Me.lbl_correon.Location = New System.Drawing.Point(61, 81)
         Me.lbl_correon.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lbl_correon.Name = "lbl_correon"
